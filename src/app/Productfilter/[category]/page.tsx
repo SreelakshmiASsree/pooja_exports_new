@@ -161,9 +161,9 @@ const categoriesData = {
 
 
 const categoryBanners: Record<keyof typeof categoriesData, string> = {
-    Charcoal: "/Images/productfiltercharcol.png",
-    Coconut: "/Images/productfiltercoconut.avif",
-    WPC: "/Images/productfilterwpc.png",
+    Charcoal: "/images/productfiltercharcol.png",
+    Coconut: "/images/productfiltercoconut.avif",
+    WPC: "/images/productfilterwpc.png",
 };
 
 interface Props {
