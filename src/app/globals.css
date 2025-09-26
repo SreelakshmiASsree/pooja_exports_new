@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+
+* {
+    box-sizing: border-box;
+}
+
+.custom_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    color: var(--foreground);
+    font-family: var(--font-poppins), sans-serif;
+
+
+}
+
+.font-rubik-doodle {
+    font-family: 'Rubik Doodle Shadow', cursive;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
