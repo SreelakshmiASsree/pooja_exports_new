@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FaClock, FaCircleCheck, FaTruck } from "react-icons/fa6";
 import Navbar from "@/components/Navbar/page";
@@ -19,7 +19,7 @@ import banner_image from "../../../public/images/banner_img.webp"
 export default function ProductsPage() {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
-    const pathname = usePathname();
+   
     const router = useRouter();
     const handleNavigation = (path: string) => {
         setLoading(true);
@@ -91,7 +91,9 @@ export default function ProductsPage() {
                 "/images/pebbelsfive.webp",
             ],
             description:
-                "Specializing in high-quality decorative pebbles for spiritual and aesthetic purposes. Our diverse range ensures both spiritual significance and aesthetic appeal. Exported globally with meticulous packaging for safe transit. Experience spirituality and beauty with us.",
+                `Specializing in high-quality decorative pebbles for spiritual and aesthetic purposes. 
+                Our diverse range ensures both spiritual significance and aesthetic appeal. Exported 
+                globally with meticulous packaging for safe transit. Experience spirituality and beauty with us.`,
         },
         {
             key: "Charcoal",
@@ -104,7 +106,10 @@ export default function ProductsPage() {
                 "/images/Coir_mat.pdf",
             ],
             description:
-                "Coconut Charcoal Briquettes are made from coconut shell, which is carbonized and then compressed to briquettes. Environment friendly as it is derived from a renewable resource and 100% organic in its content. Our Coconut charcoal briquettes are packed in high quality durable packaging with the outer cover customized for the relevant market.",
+                `Coconut Charcoal Briquettes are made from coconut shell, which is 
+                carbonized and then compressed to briquettes. Environment friendly as it is derived 
+                from a renewable resource and 100% organic in its content. Our Coconut charcoal briquettes
+                 are packed in high quality durable packaging with the outer cover customized for the relevant market.`,
         },
 
 
@@ -130,7 +135,9 @@ export default function ProductsPage() {
                 "/images/Coir_mat.pdf",  // put pdfs here
             ],
             description:
-                "We manufacture and export fine coir fibre extracted from mature green husks. Coir is used for commercial and industrial applications for mats, mattresses, brushes, and upholstery. Free from pith and roots. Available at competitive rates and customizable.",
+                `We manufacture and export fine coir fibre extracted from mature green husks.
+                 Coir is used for commercial and industrial applications for mats, mattresses, brushes, 
+                 and upholstery. Free from pith and roots. Available at competitive rates and customizable.`,
         },
 
 
@@ -142,7 +149,10 @@ export default function ProductsPage() {
 
             ],
             description:
-                "The coconut shell has a high calorific value and can be used to produce steam, energy-rich gases, bio-oil, biochar etc. It is a solid fuel, more suitable for pyrolysis process due to lower ash content, high volatile matter, and higher fixed carbon content for quality residue.",
+                `The coconut shell has a high calorific value and can be used
+                 to produce steam, energy-rich gases, bio-oil, biochar etc. It is a solid fuel, 
+                 more suitable for pyrolysis process due to lower ash content, high volatile matter, 
+                 and higher fixed carbon content for quality residue.`,
         },
 
 
@@ -187,7 +197,11 @@ export default function ProductsPage() {
 
             ],
             description:
-                "Pooja Exports is a premier exporter of all types of plywood, steel pipes, galvanized steel, ready-made door sets, door accessories, aluminum accessories, door handles, door locks, light fittings, metal chains, metal hooks and solar lights. We can ship the product to your location, subject to conditions and costs prevalent in your country.",
+                `Pooja Exports is a premier exporter of all types of plywood, 
+                steel pipes, galvanized steel, ready-made door sets, door accessories, 
+                aluminum accessories, door handles, door locks, light fittings, metal chains,
+                 metal hooks and solar lights. We can ship the product to your location, subject 
+                 to conditions and costs prevalent in your country.`,
         },
         {
             key: "Tiles",
@@ -208,7 +222,8 @@ export default function ProductsPage() {
                 "/images/tiles13.jpeg",
             ],
             description:
-                "High quality ceramic and porcelain tiles for residential and commercial applications. Durable, easy to clean, and available in multiple sizes and finishes.",
+                `High quality ceramic and porcelain tiles for residential
+                 and commercial applications. Durable, easy to clean, and available in multiple sizes and finishes.`,
         },
         {
             key: "kairali Steel",
@@ -237,13 +252,15 @@ export default function ProductsPage() {
             key: "PVC",
             images: ["/images/pvcone.webp", "/images/pvctwo.webp"],
             description:
-                "High quality PVC pipes and fittings suitable for plumbing, water supply, and industrial applications. Durable and resistant to corrosion.",
+                `High quality PVC pipes and fittings suitable for plumbing, water supply, and industrial 
+                applications. Durable and resistant to corrosion.`,
         },
         {
             key: "Medical Clothing and Disposables",
             images: ["/images/medicalshoeone.webp", "/images/medicalshoe2.jpg"],
             description:
-                "Semi-husked coconuts for culinary and oil extraction purposes. High quality and hygienically processed for global export.",
+                `Semi-husked coconuts for culinary and oil extraction purposes.
+                 High quality and hygienically processed for global export.`,
         },
         {
             key: "Woods",
@@ -251,8 +268,6 @@ export default function ProductsPage() {
                 "/images/woodthree.webp",
                 "/images/woodone.webp",
                 "/images/woodtwo.webp",
-
-
 
                 "/images/wood5.jpeg",
                 "/images/wood6.jpeg",
@@ -262,7 +277,8 @@ export default function ProductsPage() {
 
             ],
             description:
-                "Premium wood products for furniture, construction, and decoration. Available in multiple species, grades, and finishes.",
+                `Premium wood products for furniture, 
+                construction, and decoration. Available in multiple species, grades, and finishes.`,
         },
         {
             key: "WPC",
@@ -271,7 +287,8 @@ export default function ProductsPage() {
 
             ],
             description:
-                "Wood Plastic Composite (WPC) products suitable for decking, fencing, and interior applications. Durable, low maintenance, and eco-friendly.",
+                `Wood Plastic Composite (WPC) products 
+                suitable for decking, fencing, and interior applications. Durable, low maintenance, and eco-friendly.`,
         },
         {
             key: "Coco Peat",
@@ -327,7 +344,9 @@ export default function ProductsPage() {
                 "/images/fencingtwo.pdf",
             ],
             description:
-                "We offer a wide variety of fencing solutions suitable for residential, commercial, and industrial purposes. Durable, reliable, and exported globally.",
+                `We offer a wide variety of fencing 
+                solutions suitable for residential, commercial, and industrial purposes. 
+                Durable, reliable, and exported globally.`,
         },
         {
             key: "Scrap",
@@ -396,10 +415,6 @@ export default function ProductsPage() {
         setModalOpen(false);
         setActiveProduct(null);
     };
-    const [expandedSections, setExpandedSections] = useState<{ [key: number]: boolean }>({});
-    const toggleSection = (idx: number) => {
-        setExpandedSections(prev => ({ ...prev, [idx]: !prev[idx] }));
-    };
 
     return (
         <>
@@ -458,7 +473,7 @@ export default function ProductsPage() {
                         </Link>
                     </div>
                     <div className="flex justify-center items-center ">
-                        <p className="text-[#000] font-normal lg:text-sm text-xs text-center">Lorem Ipsum is simply dummy text of
+                        <p className="text-[#000] font-normal lg:text-sm text-xs text-center">{`Lorem Ipsum is simply dummy text of
                             the
                             printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
@@ -470,14 +485,14 @@ export default function ProductsPage() {
                             dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
                             to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. </p>
+                            remaining essentially unchanged. `}</p>
                     </div>
                 </div>
                 <div className="lg:mt-32 mt-5 flex flex-col lg:gap-10 gap-10">
                     {products.map((product, idx) => {
                         const currentImage = product.images[carouselIndices[idx]];
                         const isPDF = currentImage.endsWith(".pdf");
-                        const isVideo = currentImage.endsWith(".mp4");
+                       
 
                         const isReversed = idx % 2 === 1;
                         const bgColor = isReversed ? "bg-[#F3EDDF]" : "bg-transparent";
@@ -522,7 +537,7 @@ export default function ProductsPage() {
                                                 width={450}
                                                 height={300}
                                                 alt={product.key}
-                                                className="object-cover h-[400px] w-[500px]"
+                                                className="object-cover lg:h-[400px] h-full w-[500px]"
                                                 onClick={() => openCarousel(idx)}
                                             />
                                         ) : null}

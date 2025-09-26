@@ -6,10 +6,7 @@ import Footer from "@/components/Footer/page";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-type ProductCategory = {
-    name: string;
-    images: string[];
-};
+
 
 const categoriesData = {
     Charcoal: [
@@ -295,15 +292,15 @@ export default function ProductFilter({ params }: Props) {
 
 
                 {modalOpen && (
-                    <div className="fixed inset-0 bg-white/90 flex justify-center items-center z-50 px-10">
+                    <div className="fixed inset-0 bg-white/90 flex justify-center items-center z-50 px-5">
                         <button
-                            className="absolute top-5 right-5 text-[#000] text-3xl"
+                            className="absolute top-5 right-8 text-[#000] text-3xl"
                             onClick={closeCarousel}
                         >
                             <IoClose />
                         </button>
                         <button
-                            className="text-[#000] text-4xl absolute left-5"
+                            className="text-[#000] text-4xl absolute -left-3 "
                             onClick={prevImage}
                         >
                             <IoIosArrowBack />
@@ -322,12 +319,12 @@ export default function ProductFilter({ params }: Props) {
                                 width={800}
                                 height={600}
                                 alt="carousel"
-                                className="object-contain max-h-[90vh]"
+                                className="object-contain max-h-[90vh] px-5"
                             />
                         )}
 
                         <button
-                            className="text-[#000] text-4xl absolute right-5"
+                            className="text-[#000] text-4xl absolute -right-3 "
                             onClick={nextImage}
                         >
                             <IoIosArrowForward />
