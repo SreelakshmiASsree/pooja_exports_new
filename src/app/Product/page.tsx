@@ -434,10 +434,10 @@ export default function ProductsPage() {
   height={400}      // set your image height
   className="w-full object-cover h-[400px]"
 />
-                    <div className="absolute lg:top-52 top-36 lg:left-10 left-5">
-                        <h1 className="lg:text-8xl md:text-5xl text-3xl max-w-[540px] font-bold leading-none text-white">
+                    <div className="absolute lg:top-52 top-36 lg:left-10 left-28">
+                        <h1 className="lg:text-8xl md:text-5xl text-6xl max-w-[540px]  font-bold leading-none text-white">
                             Our <br />
-                            <span className="lg:text-7xl md:text-5xl text-3xl leading-none">
+                            <span className="lg:text-7xl md:text-5xl text-6xl leading-none">
                                 Products
                             </span>
                         </h1>

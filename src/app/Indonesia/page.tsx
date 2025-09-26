@@ -153,8 +153,8 @@ export default function Indonesia() {
           className="w-full object-cover h-[400px]"
         />
         <div className="absolute lg:top-44 top-36 lg:left-10 left-5">
-          <h1 className="lg:text-7xl md:text-5xl text-3xl max-w-[540px] font-bold text-white">Indonasia Factory</h1>
-          <p className="lg:text-lg text-[10px] max-w-[510px] text-justify font-extrabold text-white">
+          <h1 className="lg:text-7xl md:text-5xl text-4xl max-w-[540px] font-bold text-white mb-2">Indonasia Factory</h1>
+          <p className="lg:text-lg text-[15px] max-w-[300px] lg:text-justify font-extrabold text-white">
             Address:- PT POOJA EXPORTS INTERNATIONAL WTC Mangga Dua, Jakarta, Indonesia
           </p>
         </div>
@@ -162,32 +162,32 @@ export default function Indonesia() {
 
       {/* Back Button */}
       <div className="custom_container">
-        <div className="text-[#fff] lg:text-start my-5 lg:my-10">
+        <div className="text-[#fff] lg:text-start my-7 lg:my-10">
           <Link href="/" className="relative z-50 inline-block lg:py-3 py-2 px-4 lg:px-6 text-sm lg:text-[15px] bg-[#D73543] hover:bg-[#a52631] rounded-xl text-white">
             <FaArrowLeft className="inline mr-2" /> Back
           </Link>
         </div>
 
         <div className="flex justify-center items-center">
-          <p className="text-[#000] font-normal lg:text-sm text-xs text-center">
+          <p className="text-[#000] font-normal lg:text-sm text-xs text-center my-5 lg:my-0">
            {` Lorem Ipsum is simply dummy text of the printing and typesetting industry...`}
           </p>
         </div>
 
         {/* Products Section */}
         <div>
-          <div className="lg:mb-5 mb-4 text-center lg:my-10 my-5">
+          <div className="lg:mb-5 mb-4 text-center lg:my-10 my-8">
             <p className="font-rubik-doodle font-normal lg:text-3xl text-2xl leading-none">Ablaze</p>
             <p className="lg:text-4xl text-3xl font-bold ml-5 -mt-[6px] leading-none">Products</p>
           </div>
 
-          <div className="lg:mt-32 mt-5 flex flex-col lg:gap-20 gap-10 lg:mb-16 mb-8">
+          <div className="lg:mt-32 mt-5 flex flex-col lg:gap-20 gap-16 lg:mb-16 mb-8">
             {productsData.map((item, index) => {
               const productImages = products[item.id];
               const pageIndex = pageIndices[item.id] ?? 0;
 
               return (
-                <div key={item.id} className={`flex flex-col px-5 ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} justify-around items-center`}>
+                <div key={item.id} className={`flex flex-col px-5 ${index % 2 === 1 ? "lg:flex-row-reverse " : "lg:flex-row"} lg:gap-0 gap-3 justify-around items-center`}>
                   <div className="relative items-center gap-4 flex px-5">
                     {productImages.length > 1 && (
                       <button

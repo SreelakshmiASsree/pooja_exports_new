@@ -10,7 +10,7 @@ export default function About() {
       <Navbar /> 
       {/* Image section with stats */}
       <div className="relative">
-        <Image src="/Images/about.png" alt="about" width={1920} height={1080} className="w-full object-cover" />
+        <Image src="/images/about.png" alt="about" width={1920} height={1080} className="w-full object-cover" />
         <div className="absolute lg:top-[296px] top-16 lg:left-[320px] left-6 md:left-[8rem] md:top-[13rem]">
           <div className="bg-[#fff] lg:rounded-3xl rounded-xl shadow-2xl lg:py-7 py-4 lg:w-[950px] md:w-[550px] w-[340px]">
             <div className="flex justify-around items-center lg:gap-0 gap-4">
