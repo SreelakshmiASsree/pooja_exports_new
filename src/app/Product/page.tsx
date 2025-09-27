@@ -464,7 +464,7 @@ export default function ProductsPage() {
                             <p className="font-extrabold lg:text-[16px] text-[8px]">On-Time Delivery</p>
                         </div>
                     </div>
-                    <div className="text-[#fff] lg:text-start my-5 lg:my-10">
+                    <div className="text-[#fff] lg:text-start my-8 lg:my-10">
                         <Link href="/" className="">
                             <button
                                 className="lg:py-3 py-2 flex gap-1 px-4 lg:px-6 text-sm lg:text-[15px] bg-[#D73543] hover:bg-[#a52631] rounded-xl ">
@@ -472,7 +472,7 @@ export default function ProductsPage() {
                             </button>
                         </Link>
                     </div>
-                    <div className="flex justify-center items-center ">
+                    <div className="flex justify-center items-center my-8 lg:my-0">
                         <p className="text-[#000] font-normal lg:text-sm text-xs text-center">{`Lorem Ipsum is simply dummy text of
                             the
                             printing and typesetting industry.
@@ -501,7 +501,7 @@ export default function ProductsPage() {
                                 key={idx}
                                 data-aos="fade-up"
                                 className={`flex flex-col ${isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
-                                    } justify-center items-center relative lg:gap-20  ${bgColor} lg:py-10 py-6 cursor-pointer lg:px-0 px-5 overflow-hidden `}
+                                    } justify-center items-center relative lg:gap-20  ${bgColor} lg:py-10 pb-6 pt-12 cursor-pointer lg:px-0 px-5 overflow-hidden `}
                             >
 
 
@@ -569,7 +569,7 @@ export default function ProductsPage() {
                                             <div className="mt-6">
                                                 <button
                                                     onClick={() => handleNavigation(`/Productfilter/${product.key}`)}
-                                                    className="flex items-center justify-end gap-2 bg-[#D73543] text-white px-3 py-1 lg:text-sm text-xs rounded-full hover:bg-[#ba2b37] transition-all"
+                                                    className="flex items-center justify-end gap-2 bg-[#D73543] text-white px-4 py-2 lg:text-sm text-xs rounded-full hover:bg-[#ba2b37] transition-all"
                                                 >
                                                     View More <span className="text-lg"><FaArrowRightLong /></span>
                                                 </button>
@@ -581,13 +581,13 @@ export default function ProductsPage() {
                                 </div>
                                 {/* Download Button (if brochure exists for specific products) */}
                                 {["Charcoal", "Coir", "fencing"].includes(product.key) && product.brochures && product.brochures.length > 0 && (
-                                    <div className="absolute lg:right-37 -right-1 -top-1 lg:top-1 flex flex-col  z-10 ">
+                                    <div className="absolute lg:right-37 right-3 -top-2 lg:top-1 flex flex-col  z-10 pt-3  ">
                                         {product.brochures.map((brochure, bIdx) => (
                                             <a
                                                 key={bIdx}
                                                 href={brochure}
                                                 download
-                                                className="flex items-center  gap-2 text-[#0b7905] underline-offset-1 lg:text-sm text-xs underline px-3 py-1 rounded-full hover:bg-[#0b7905] hover:text-[#fff] transition-all"
+                                                className="flex items-center  gap-2 text-[#0b7905] underline-offset-1 lg:text-sm text-xs underline px-3 rounded-full  hover:text-[#4918ac] transition-all"
                                             >
                                                 Download Brochure {bIdx + 1} <AiOutlineCloudDownload className="lg:text-2xl text-lg" />
                                             </a>

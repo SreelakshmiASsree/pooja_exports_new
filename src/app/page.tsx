@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Footer from "@/components/Footer/page";
 import Navbar from "@/components/Navbar/page";
 import Image from "next/image";
@@ -10,26 +11,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsChat } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import Initialloader from "@/components/Initialloader/page";
-import AOS from "aos";  
+import AOS from "aos";
 import "aos/dist/aos.css";
 export default function Home() {
-  const [redirecting, setRedirecting] = useState(false);
-useEffect(() => {
-  AOS.init({
-    duration: 1000,
-    once: false,
-    easing: "ease-in-out",
-  });
-}, []);
-  
-  const router = useRouter();
-  const handleRedirect = (path: string) => {
-    setRedirecting(true);
-    setTimeout(() => {
-      router.push(path);
-    }, 1500); // delay so loader is visible
-  };
-
 
   const [loading, setLoading] = useState(true);
 
@@ -42,7 +26,47 @@ useEffect(() => {
     return () => clearTimeout(timer);
   }, []);
 
-   if (loading || redirecting) {
+  const [redirecting, setRedirecting] = useState(false);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: "ease-in-out",
+    });
+  }, []);
+
+
+  useEffect(() => {
+    const scrollTo = sessionStorage.getItem("scrollTo");
+    if (!scrollTo) return;
+
+    // Wait until loader disappears
+    const timer = setTimeout(() => {
+      const section = document.getElementById(scrollTo);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        sessionStorage.removeItem("scrollTo");
+      }
+    }, 100); // small delay to ensure DOM is ready
+
+    return () => clearTimeout(timer);
+  }, [loading]); // <--- depends on loading
+
+
+
+
+  const router = useRouter();
+  const handleRedirect = (path: string) => {
+    setRedirecting(true);
+    setTimeout(() => {
+      router.push(path);
+    }, 1500); // delay so loader is visible
+  };
+
+
+
+
+  if (loading || redirecting) {
     return (
       <div className="h-screen w-full flex items-center justify-center bg-white">
         <Initialloader size={80} color="#D73543" message="Loading..." />
@@ -51,7 +75,7 @@ useEffect(() => {
   }
 
 
-  
+
   return (
     <>
       <Navbar />
@@ -60,7 +84,7 @@ useEffect(() => {
       <section>
         <div className="relative w-full h-screen">
           <video
-            src="/images/hero.mp4"
+            src="/images/hero_video.mp4"
             autoPlay
             muted
             loop
@@ -107,7 +131,7 @@ useEffect(() => {
             <Image src="/images/about.webp" alt="aboutus" width={800} height={530} className="object-cover" />
           </div>
 
-          <div    className="flex flex-col lg:gap-6 gap-3 overflow-hidden" data-aos="zoom-in">
+          <div className="flex flex-col lg:gap-6 gap-3 overflow-hidden" data-aos="zoom-in">
             <p className="lg:text-[15px] text-xs md:text-sm max-w-[630px] text-[#000] text-justify lg:leading-6 lg:px-0 px-3">
               Pooja Exports is a premier global export company with over 25 years of trusted service, connecting
               markets across 32 countries. Based in Hong Kong, we specialize in sourcing, packaging, and shipping
@@ -126,7 +150,7 @@ useEffect(() => {
 
             <div className="text-[#fff] text-center my-8 lg:mb-0">
               <a href="/About">
-                <button    onClick={() => handleRedirect("/About")} className="lg:py-3 py-2 px-4 lg:px-6 text-sm lg:text-[15px] bg-[#D73543] hover:bg-[#a52631] rounded-xl inline-flex items-center gap-2">
+                <button onClick={() => handleRedirect("/About")} className="lg:py-3 py-2 px-4 lg:px-6 text-sm lg:text-[15px] bg-[#D73543] hover:bg-[#a52631] rounded-xl inline-flex items-center gap-2">
                   Read More <FaArrowRight />
                 </button>
               </a>
