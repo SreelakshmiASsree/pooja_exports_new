@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Initialloader from "@/components/Initialloader/page";
 
 export default function Footer() {
   const [loading, setLoading] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleFooterLinkClick = (href: string) => {
     setLoading(true);
@@ -14,6 +18,28 @@ export default function Footer() {
       window.location.href = href;
     }, 1200);
   };
+
+    const handleScrollToLocation = () => {
+    setIsOpen(false);
+    if (pathname === "/") {
+      const section = document.getElementById("locations");
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollTo", "locations");
+      router.push("/");
+    }
+  };
+
+const handleScrollToContact = () => {
+  setIsOpen(false);
+  if (pathname === "/") {
+    const section = document.getElementById("contact");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    sessionStorage.setItem("scrollTo", "contact");
+    router.push("/");
+  }
+};
 
   return (
     <>
@@ -83,7 +109,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleFooterLinkClick("/#locations")}
+                     onClick={handleScrollToLocation}
                     className="hover:text-[#a52631] text-left"
                   >
                     Locations
@@ -91,7 +117,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleFooterLinkClick("/#contact")}
+                      onClick={handleScrollToContact}
                     className="hover:text-[#a52631] text-left"
                   >
                     Contact Us

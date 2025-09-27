@@ -153,7 +153,7 @@ export default function Indonesia() {
           className="w-full object-cover h-[400px]"
         />
         <div className="absolute lg:top-44 top-36 lg:left-10 left-5">
-          <h1 className="lg:text-7xl md:text-5xl text-4xl max-w-[540px] font-bold text-white mb-2">Indonasia Factory</h1>
+          <h1 className="lg:text-7xl md:text-5xl text-5xl max-w-[540px] font-bold text-white mb-2">Indonasia Factory</h1>
           <p className="lg:text-lg text-[15px] max-w-[300px] lg:text-justify font-extrabold text-white">
             Address:- PT POOJA EXPORTS INTERNATIONAL WTC Mangga Dua, Jakarta, Indonesia
           </p>
